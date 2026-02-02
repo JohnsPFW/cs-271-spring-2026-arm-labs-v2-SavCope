@@ -50,14 +50,18 @@ _start:
     //   3. Check if it was the null terminator
     //   4. Increment both pointers
     //   5. Loop back
+
     
-copy_loop:
+    
     // -------------------------------------------------------------------------
     // TODO #1: Load a byte from the source address [X0] into W2
     // Syntax: LDRB Wt, [Xn]   (Load Register Byte)
     // -------------------------------------------------------------------------
     
     // YOUR CODE HERE
+
+copy_loop:
+    LDRB W2, [X0]
     
     // -------------------------------------------------------------------------
     // TODO #2: Store the byte from W2 to the destination address [X1]
@@ -65,6 +69,8 @@ copy_loop:
     // -------------------------------------------------------------------------
     
     // YOUR CODE HERE
+
+    STRB W2, [X1]
     
     // -------------------------------------------------------------------------
     // TODO #3: Check if the byte was the null terminator (0)
@@ -73,6 +79,8 @@ copy_loop:
     // -------------------------------------------------------------------------
     
     // YOUR CODE HERE
+
+    CBZ W2, done
     
     // -------------------------------------------------------------------------
     // TODO #4: Increment both pointers to the next byte
@@ -81,6 +89,9 @@ copy_loop:
     // -------------------------------------------------------------------------
     
     // YOUR CODE HERE (two lines)
+
+    ADD X0, X0, #1
+    ADD X1, X1, #1
     
     // -------------------------------------------------------------------------
     // TODO #5: Loop back to copy the next character
@@ -88,6 +99,8 @@ copy_loop:
     // -------------------------------------------------------------------------
     
     // YOUR CODE HERE
+
+    B copy_loop
 
     // =========================================================================
     // STEP 3: Signal Completion (Already done for you)
