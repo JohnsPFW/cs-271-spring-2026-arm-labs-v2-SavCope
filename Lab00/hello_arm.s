@@ -52,6 +52,7 @@ _start:
     //
     // YOUR CODE HERE:
 
+    MOV X3, #25
 
     // -------------------------------------------------------------------------
     // EXERCISE 2: Perform addition
@@ -61,6 +62,7 @@ _start:
     //
     // YOUR CODE HERE:
 
+    ADD X4, X3, X2
 
     // -------------------------------------------------------------------------
     // EXERCISE 3: Perform subtraction
@@ -71,6 +73,7 @@ _start:
     //
     // YOUR CODE HERE:
 
+    SUB X5, X0, X1
 
     // -------------------------------------------------------------------------
     // EXERCISE 4: Create your own calculation
@@ -81,6 +84,8 @@ _start:
     //
     // YOUR CODE HERE:
 
+    ADD X7, X3, X3
+    ADD X6, X7, X7
 
     // =========================================================================
     // PROGRAM TERMINATION
